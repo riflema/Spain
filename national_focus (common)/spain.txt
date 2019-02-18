@@ -1,0 +1,3634 @@
+focus_tree = {
+	id = spain
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SPR
+		}
+	}
+	default = no
+	focus = {
+		id = SPR_Multi_Cultural_Peninsula
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		x = 12
+		y = 0
+			completion_reward = {
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = SPR_Nueva_Nacion
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		x = 26
+		y = 0
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = SPR_Sugar_Rivalry
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		x = 8
+		y = 17
+
+	}
+	focus = {
+		id = SPR_Spanish_Empire
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		x = 42
+		y = 0
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = SPR_Consolidation_of_1833_Treaties
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Multi_Cultural_Peninsula
+		}
+		x = 12
+		y = 1
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Galician_Nationalism
+		icon = GFX_goal_anschluss
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Consolidation_of_1833_Treaties
+		}
+		x = 4
+		y = 2
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Disband_Junta
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Galician_Nationalism
+		}
+		mutually_exclusive = {
+			focus = SPR_Cooperate_Junta
+		}
+		x = 2
+		y = 3
+			completion_reward = {
+					add_stability = -0.05
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = SPR_Fortify_Coasts
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Disband_Junta
+		}
+		x = 0
+		y = 4
+			completion_reward = {
+					171 = {
+							add_building_construction = {
+									type = coastal_bunker
+									province = 6764
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 3761
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 758
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 11710
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 9689
+									level = 1
+									instant_build = yes
+								}
+							add_building_construction = {
+									type = coastal_bunker
+									province = 6734
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Cooperate_Junta
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Galician_Nationalism
+		}
+		mutually_exclusive = {
+			focus = SPR_Disband_Junta
+		}
+		x = 6
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Lower_Galician_Conscription
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cooperate_Junta
+		}
+		x = 6
+		y = 4
+			completion_reward = {
+					add_stability = 0.05
+					add_ideas = SPR_Low_Galician_Conscription
+				}
+
+	}
+	focus = {
+		id = SPR_Santiago_Madrid
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cooperate_Junta
+		}
+		x = 8
+		y = 4
+			completion_reward = {
+					171 = {
+							add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Queen_Visit
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Lower_Galician_Conscription
+		}
+		prerequisite = {
+			focus = SPR_Santiago_Madrid
+		}
+		x = 6
+		y = 5
+			completion_reward = {
+					add_stability = 0.05
+					add_political_power = -50
+				}
+
+	}
+	focus = {
+		id = SPR_Propose_Self_Governance
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Queen_Visit
+		}
+		mutually_exclusive = {
+			focus = SPR_Unthinkable_Destiny
+			focus = SPR_Keep_Galicia_Spanish
+		}
+		x = 8
+		y = 6
+			completion_reward = {
+					add_stability = 0.05
+					add_political_power = -20
+				}
+
+	}
+	focus = {
+		id = SPR_Create_Kingdom_Galicia
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Propose_Self_Governance
+		}
+		x = 8
+		y = 7
+			completion_reward = {
+					release_puppet = GAL
+					GAL = {
+							add_opinion_modifier = {
+									target = SPR
+									modifier = spr_gave_autonomy
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Basque_Nationalism
+		icon = GFX_goal_anschluss
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Consolidation_of_1833_Treaties
+		}
+		x = 12
+		y = 2
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Hunt_Bascongada
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Basque_Nationalism
+		}
+		mutually_exclusive = {
+			focus = SPR_Collaborate_Bascongada
+		}
+		x = 10
+		y = 3
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Ban_Basque
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Hunt_Bascongada
+		}
+		x = 10
+		y = 4
+			completion_reward = {
+					add_stability = -0.05
+					add_political_power = 50
+				}
+
+	}
+	focus = {
+		id = SPR_Make_them_Build_Forts_Against_French
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ban_Basque
+		}
+		x = 10
+		y = 5
+			completion_reward = {
+					add_stability = -0.05
+					FRA = {
+							add_opinion_modifier = {
+									modifier = spr_french_angry_at_forts
+									target = SPR
+								}
+						}
+					custom_effect_tooltip = spr_french_border_forts
+					hidden_effect = {
+							165 = {
+									add_building_construction = {
+											type = bunker
+											province = 9824
+											level = 1
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											province = 11779
+											level = 1
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											province = 3898
+											level = 1
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											province = 3899
+											level = 1
+											instant_build = yes
+										}
+								}
+							166 = {
+									add_building_construction = {
+											type = bunker
+											province = 899
+											level = 1
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											province = 915
+											level = 1
+											instant_build = yes
+										}
+									add_building_construction = {
+											type = bunker
+											province = 11838
+											level = 1
+											instant_build = yes
+										}
+								}
+							172 = {
+									add_building_construction = {
+											type = bunker
+											province = 3931
+											level = 1
+											instant_build = yes
+										}
+								}
+							1059 = {
+									add_building_construction = {
+											type = bunker
+											province = 3737
+											level = 1
+											instant_build = yes
+										}
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Suppress_Basque_Nationalists
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Make_them_Build_Forts_Against_French
+		}
+		x = 10
+		y = 6
+			completion_reward = {
+					add_stability = -0.05
+					add_popularity = {
+							ideology = anarchism
+							popularity = -0.05
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Collaborate_Bascongada
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Basque_Nationalism
+		}
+		mutually_exclusive = {
+			focus = SPR_Hunt_Bascongada
+		}
+		x = 14
+		y = 3
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Language_is_Culture
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Collaborate_Bascongada
+		}
+		x = 14
+		y = 4
+			completion_reward = {
+					add_stability = 0.05
+					add_ideas = SPR_Language_Culture
+				}
+
+	}
+	focus = {
+		id = SPR_Expand_Their_Regional_Influence
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Language_is_Culture
+		}
+		x = 14
+		y = 5
+			completion_reward = {
+					add_stability = 0.05
+					BAS = {
+							add_state_core = 172
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Promote_Basque_Scholars
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Expand_Their_Regional_Influence
+		}
+		x = 14
+		y = 6
+			completion_reward = {
+					add_ideas = SPR_Promote_Basque_Scholar
+				}
+
+	}
+	focus = {
+		id = SPR_Keep_Basque_Spanish
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Promote_Basque_Scholars
+			focus = SPR_Suppress_Basque_Nationalists
+		}
+		x = 12
+		y = 7
+			completion_reward = {
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = SPR_Catalan_Nationalism
+		icon = GFX_goal_anschluss
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Consolidation_of_1833_Treaties
+		}
+		x = 20
+		y = 2
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Industrial_Center
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Catalan_Nationalism
+		}
+		x = 20
+		y = 3
+
+	}
+	focus = {
+		id = SPR_Oppose_Renaixenca
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Center
+		}
+		mutually_exclusive = {
+			focus = SPR_Support_Renaixenca
+		}
+		x = 16
+		y = 4
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Catalan_Industry_Spanish_Weapons
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Oppose_Renaixenca
+		}
+		x = 18
+		y = 5
+			completion_reward = {
+					165 = {
+							add_building_construction = {
+									type = arms_factory
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Support_Renaixenca
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Center
+		}
+		mutually_exclusive = {
+			focus = SPR_Oppose_Renaixenca
+		}
+		x = 24
+		y = 4
+			completion_reward = {
+					add_stability = 0.05
+					add_political_power = -50
+				}
+
+	}
+	focus = {
+		id = SPR_Improve_Catalan_Industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Renaixenca
+		}
+		x = 22
+		y = 5
+			completion_reward = {
+					165 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Barcelona_Second_Capital
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Renaixenca
+		}
+		x = 24
+		y = 5
+			completion_reward = {
+					add_stability = 0.05
+					add_political_power = -30
+				}
+
+	}
+	focus = {
+		id = SPR_Autonomous_Region_Only
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Improve_Catalan_Industry
+		}
+		prerequisite = {
+			focus = SPR_Barcelona_Second_Capital
+		}
+		mutually_exclusive = {
+			focus = SPR_Expand_Catalonia
+		}
+		x = 22
+		y = 6
+			completion_reward = {
+					add_stability = 0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Further_Expand_Catalan_Industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Autonomous_Region_Only
+		}
+		x = 22
+		y = 7
+			completion_reward = {
+					165 = {
+							add_building_construction = {
+									type = industrial_complex
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Expand_Catalonia
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Barcelona_Second_Capital
+		}
+		prerequisite = {
+			focus = SPR_Improve_Catalan_Industry
+		}
+		mutually_exclusive = {
+			focus = SPR_Autonomous_Region_Only
+		}
+		x = 24
+		y = 6
+			completion_reward = {
+					add_stability = 0.1
+					add_political_power = -60
+					CAT = {
+							add_state_core = 166
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Barcelona_First_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Expand_Catalonia
+		}
+		x = 24
+		y = 7
+			completion_reward = {
+					165 = {
+							add_building_construction = {
+									type = dockyard
+									level = 3
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 3
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Start_Election_period
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Nueva_Nacion
+		}
+		x = 26
+		y = 11
+		completion_reward = {
+			country_event = { days = 1 id = spain.3 }
+		}
+	}
+	focus = {
+		id = SPR_Ratify_Constitution
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Start_Election_period
+		}
+		x = 26
+		y = 12
+		completion_reward = {
+			add_political_power = -30
+		}
+	}
+	focus = {
+		id = SPR_Cultural_Center
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ratify_Constitution
+		}
+		x = 24
+		y = 13
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = -0.05
+		}
+
+	}
+	focus = {
+		id = SPR_Bourbon_Legacy
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ratify_Constitution
+		}
+		x = 26
+		y = 13
+		completion_reward = {
+			PAR = {
+				add_opinion_modifier = {
+					modifier = spr_bourbon_legacy
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_bourbon_legacy
+				target = PAR
+			}
+			TSC = {
+				add_opinion_modifier = {
+					modifier = spr_bourbon_legacy
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_bourbon_legacy
+				target = TSC
+			}
+		}
+	}
+	focus = {
+		id = SPR_Sun_Never_Sets
+		icon = GFX_goal_generic_territory_or_war
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Spanish_Empire
+		}
+		x = 38
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Improve_Havanas_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Sun_Never_Sets
+		}
+		x = 34
+		y = 2
+		completion_reward = {
+			315 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Dominican_Threat
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Improve_Havanas_Port
+		}
+		x = 28
+		y = 3
+		completion_reward = {
+			HAI = {
+				add_opinion_modifier = {
+					modifier = spr_dominican_threat1
+					target = SPR
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Port_Puerto_Rico
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Improve_Havanas_Port
+		}
+		x = 30
+		y = 3
+		completion_reward = {
+			686 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Fortify_Santiago
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Improve_Havanas_Port
+		}
+		x = 34
+		y = 3
+		completion_reward = {
+			315 = {
+				add_building_construction = {
+					type = bunker
+					province = 1550
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Develop_Island
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Fortify_Santiago
+		}
+		x = 32
+		y = 4
+		completion_reward = {
+			315 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Increase_Sugar_Production
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Fortify_Santiago
+		}
+		x = 34
+		y = 4
+		completion_reward = {
+			add_ideas = SPR_Increased_Sugar_Production
+		}
+	}
+	focus = {
+		id = SPR_Industrial_Spain
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Start_Election_period
+		}
+		x = 36
+		y = 12
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = SPR_Iberian_Companies
+		icon = GFX_goal_generic_production2
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Spain
+		}
+		x = 34
+		y = 13
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Cortefiel_1800s
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Iberian_Companies
+		}
+		x = 34
+		y = 14
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Improve_Guam
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Sun_Never_Sets
+		}
+		x = 36
+		y = 2
+		completion_reward = {
+			646 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Train_Admirals_Abroad
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Fortify_Santiago
+		}
+		x = 36
+		y = 4
+		completion_reward = {
+			navy_experience = 200
+		}
+	}
+	focus = {
+		id = SPR_Keep_Slavery_Cuba
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Train_Admirals_Abroad
+		}
+		mutually_exclusive = {
+			focus = SPR_Abolish_Slavery_Cuba
+		}
+		x = 36
+		y = 5
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_Slaughter_Opposition
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Slavery_Cuba
+		}
+		x = 36
+		y = 6
+		completion_reward = {
+			add_stability = -0.05
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Cause_Crisis
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Slaughter_Opposition
+		}
+		x = 36
+		y = 7
+		#Do
+
+	}
+	focus = {
+		id = SPR_Manilas_Port_Improvement
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Sun_Never_Sets
+		}
+		x = 40
+		y = 2
+		completion_reward = {
+			327 = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Education_Project
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Manilas_Port_Improvement
+		}
+		x = 38
+		y = 3
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = SPR_Education_Project1
+		}
+	}
+	focus = {
+		id = SPR_Catholic_Missionaries
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Education_Project
+		}
+		x = 38
+		y = 4
+		completion_reward = {
+			PAP = {
+				add_opinion_modifier = {
+					modifier = spr_catholic_missionaries1
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_catholic_missionaries1
+				target = PAP
+			}
+		}
+	}
+	focus = {
+		id = SPR_Spanish_Arm_Industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Spain
+		}
+		x = 38
+		y = 13
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Ferrocarriles_Espanoles
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Spanish_Arm_Industry
+		}
+		x = 38
+		y = 14
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Military_Police
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Manilas_Port_Improvement
+		}
+		x = 40
+		y = 3
+		completion_reward = {
+			add_manpower = -5000
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_South_China_Sea_Agreement
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Military_Police
+		}
+		x = 40
+		y = 4
+		completion_reward = {
+			ENG = {
+				add_opinion_modifier = {
+					modifier = spr_south_china_sea_agreement1
+					target = SPR
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					modifier = spr_south_china_sea_agreement1
+					target = SPR
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					modifier = spr_south_china_sea_agreement1
+					target = FRA
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					modifier = spr_south_china_sea_agreement1
+					target = ENG
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_south_china_sea_agreement1
+				target = ENG
+			}
+			add_opinion_modifier = {
+				modifier = spr_south_china_sea_agreement1
+				target = FRA
+			}
+		}
+	}
+	focus = {
+		id = SPR_Improve_Local_Railways
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Manilas_Port_Improvement
+		}
+		x = 42
+		y = 3
+		completion_reward = {
+			327 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			623 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			624 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			825 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			628 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			627 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			326 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Increase_Production
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Improve_Local_Railways
+		}
+		x = 42
+		y = 4
+		completion_reward = {
+			add_ideas = SPR_Increased_Production11
+		}
+	}
+	focus = {
+		id = SPR_Chaos_in_Philippines
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Increase_Production
+		}
+		prerequisite = {
+			focus = SPR_South_China_Sea_Agreement
+		}
+		prerequisite = {
+			focus = SPR_Catholic_Missionaries
+		}
+		x = 40
+		y = 5
+		#Do
+	}
+	focus = {
+		id = SPR_Spanish_Colonial_Empire
+		icon = GFX_goal_demand_sudetenland
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Spanish_Empire
+		}
+		x = 48
+		y = 1
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SPR_Form_New_Conquistadors
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Spanish_Colonial_Empire
+		}
+		x = 46
+		y = 2
+		completion_reward = {
+			army_experience = 100
+			navy_experience = 100
+		}
+	}
+	focus = {
+		id = SPR_Fundraise_Expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Spanish_Colonial_Empire
+		}
+		x = 50
+		y = 2
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = -1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Morocco_Approach
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Form_New_Conquistadors
+		}
+		prerequisite = {
+			focus = SPR_Fundraise_Expeditions
+		}
+		x = 48
+		y = 3
+		completion_reward = {
+			MOR = {
+				add_opinion_modifier = {
+					modifier = spr_morocco_approach1
+					target = SPR
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Colonize_Kioko_Island
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Form_New_Conquistadors
+		}
+		prerequisite = {
+			focus = SPR_Fundraise_Expeditions
+		}
+		x = 44
+		y = 3
+		completion_reward = {
+			transfer_state = 705
+		}
+	}
+	focus = {
+		id = SPR_Fortify_Ceuta
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Morocco_Approach
+		}
+		x = 46
+		y = 4
+		completion_reward = {
+			1029 = {
+				add_building_construction = {
+					type = bunker
+					province = 13720
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Cause_Instability_Morocco
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Morocco_Approach
+		}
+		x = 48
+		y = 4
+		completion_reward = {
+			MOR = {
+				add_stability = -0.2
+			}
+		}
+	}
+	focus = {
+		id = SPR_Militarize_Canary_Islands
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Morocco_Approach
+		}
+		x = 50
+		y = 4
+		completion_reward = {
+			178 = {
+				add_building_construction = {
+					type = coastal_bunker
+					province = 13071
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Annex_Golden_Coast
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cause_Instability_Morocco
+		}
+		x = 50
+		y = 5
+#Do
+	}
+	focus = {
+		id = SPR_Further_Expansion_Inland
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Annex_Golden_Coast
+		}
+		x = 50
+		y = 6
+
+	}
+	focus = {
+		id = SPR_Dutch_Spanish_Collaboration
+		icon = GFX_goal_generic_improve_relations
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Fundraise_Expeditions
+		}
+		prerequisite = {
+			focus = SPR_Form_New_Conquistadors
+		}
+		x = 52
+		y = 3
+
+	}
+	focus = {
+		id = SPR_Asian_Competitive_Market
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Dutch_Spanish_Collaboration
+		}
+		x = 52
+		y = 4
+
+	}
+	focus = {
+		id = SPR_Catholic_Missionaries_Asia
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Asian_Competitive_Market
+		}
+		x = 52
+		y = 5
+
+	}
+	focus = {
+		id = SPR_Galicians_in_Army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Disband_Junta
+		}
+		x = 2
+		y = 4
+			completion_reward = {
+					add_ideas = SPR_Galicians_Army
+				}
+
+	}
+	focus = {
+		id = SPR_Mock_Galician_Dialect
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Galicians_in_Army
+		}
+		prerequisite = {
+			focus = SPR_Fortify_Coasts
+		}
+		x = 2
+		y = 5
+			completion_reward = {
+					add_stability = -0.05
+				}
+
+	}
+	focus = {
+		id = SPR_Unthinkable_Destiny
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Mock_Galician_Dialect
+		}
+		mutually_exclusive = {
+			focus = SPR_Propose_Self_Governance
+			focus = SPR_Keep_Galicia_Spanish
+		}
+		x = 0
+		y = 6
+			completion_reward = {
+					add_political_power = 50
+				}
+			available = {
+					has_stability < 0.3
+				}
+
+	}
+	focus = {
+		id = SPR_Sell_Galicia_Portugese
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Unthinkable_Destiny
+		}
+		x = 0
+		y = 7
+			completion_reward = {
+					POR = {
+							country_event = {
+									days = 1
+									id = spain.1
+								}
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Keep_Galicia_Spanish
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Queen_Visit
+			focus = SPR_Mock_Galician_Dialect
+		}
+		mutually_exclusive = {
+			focus = SPR_Unthinkable_Destiny
+			focus = SPR_Propose_Self_Governance
+		}
+		x = 4
+		y = 6
+			completion_reward = {
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = SPR_Atlantic_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Galicia_Spanish
+			focus = SPR_Create_Kingdom_Galicia
+		}
+		x = 4
+		y = 8
+			completion_reward = {
+					171 = {
+							add_building_construction = {
+									type = dockyard
+									level = 1
+									instant_build = yes
+								}
+							add_extra_state_shared_building_slots = 1
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Espana_Unida
+		icon = GFX_goal_generic_alliance
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Atlantic_Port
+		}
+		prerequisite = {
+			focus = SPR_Keep_Basque_Spanish
+		}
+		prerequisite = {
+			focus = SPR_Spanish_Catalonia
+		}
+		x = 12
+		y = 9
+			completion_reward = {
+					add_ideas = SPR_Espana_Unida1
+				}
+
+	}
+	focus = {
+		id = SPR_Bring_Federalism
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Espana_Unida
+		}
+		mutually_exclusive = {
+			focus = SPR_Unitary_State
+		}
+		x = 10
+		y = 10
+			completion_reward = {
+					add_stability = 0.1
+					add_ideas = SPR_Federalism
+				}
+
+	}
+	focus = {
+		id = SPR_Unitary_State
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Espana_Unida
+		}
+		mutually_exclusive = {
+			focus = SPR_Bring_Federalism
+		}
+		x = 14
+		y = 10
+			completion_reward = {
+					add_stability = -0.1
+					add_ideas = SPR_Unitary_State1
+				}
+
+	}
+	focus = {
+		id = SPR_Arrest_Catalan_Activists
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Oppose_Renaixenca
+		}
+		x = 16
+		y = 5
+			completion_reward = {
+					add_stability = -0.05
+					add_popularity = {
+							ideology = anarchism
+							popularity = -0.05
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Send_Only_Police
+		icon = GFX_goal_generic_build_tank
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Catalan_Industry_Spanish_Weapons
+		}
+		prerequisite = {
+			focus = SPR_Arrest_Catalan_Activists
+		}
+		mutually_exclusive = {
+			focus = SPR_Crackdown_All_Catalan_Opposition
+		}
+		x = 18
+		y = 6
+			completion_reward = {
+					add_political_power = 30
+				}
+
+	}
+	focus = {
+		id = SPR_Crackdown_All_Catalan_Opposition
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Arrest_Catalan_Activists
+		}
+		prerequisite = {
+			focus = SPR_Catalan_Industry_Spanish_Weapons
+		}
+		mutually_exclusive = {
+			focus = SPR_Send_Only_Police
+		}
+		x = 16
+		y = 6
+			completion_reward = {
+					add_stability = -0.05
+					army_experience = 100
+				}
+
+	}
+	focus = {
+		id = SPR_Send_Army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Crackdown_All_Catalan_Opposition
+		}
+		x = 16
+		y = 7
+			completion_reward = {
+					release = CAT
+					CAT = {
+							set_politics = {
+									ruling_party = anarchism
+									elections_allowed = no
+								}
+						}
+					declare_war_on = {
+							target = CAT
+							type = annex_everything
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Resolve_Situation_Peacefully
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Send_Only_Police
+		}
+		x = 18
+		y = 7
+			completion_reward = {
+					add_stability = -0.05
+					add_political_power = 50
+					add_popularity = {
+							ideology = anarchism
+							popularity = -0.1
+						}
+				}
+
+	}
+	focus = {
+		id = SPR_Spanish_Catalonia
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Resolve_Situation_Peacefully
+			focus = SPR_Send_Army
+			focus = SPR_Further_Expand_Catalan_Industry
+			focus = SPR_Barcelona_First_Port
+		}
+		x = 20
+		y = 8
+			completion_reward = {
+					add_political_power = 10
+				}
+			available = {
+					has_war = no
+				}
+
+	}
+	focus = {
+		id = SPR_Division_of_Powers
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ratify_Constitution
+		}
+		x = 28
+		y = 13
+		completion_reward = {
+			add_ideas = SPR_Division_Powers
+			add_popularity = { ideology = autocracy popularity = -0.05 }
+		}
+	}
+	focus = {
+		id = SPR_Keep_Pronunciamento
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cultural_Center
+		}
+		prerequisite = {
+			focus = SPR_Bourbon_Legacy
+		}
+		prerequisite = {
+			focus = SPR_Division_of_Powers
+		}
+		mutually_exclusive = {
+			focus = SPR_End_of_Old_Order
+		}
+		x = 24
+		y = 14
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_End_of_Old_Order
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Division_of_Powers
+		}
+		prerequisite = {
+			focus = SPR_Bourbon_Legacy
+		}
+		prerequisite = {
+			focus = SPR_Cultural_Center
+		}
+		mutually_exclusive = {
+			focus = SPR_Keep_Pronunciamento
+		}
+		x = 28
+		y = 14
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = SPR_Keep_Monarchy
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_End_of_Old_Order
+			focus = SPR_Keep_Pronunciamento
+		}
+		mutually_exclusive = {
+			focus = SPR_Enforce_Monarchy
+			focus = SPR_Reject_Crown
+		}
+		x = 26
+		y = 15
+		completion_reward = {
+			add_political_power = -50
+		}
+	}
+	focus = {
+		id = SPR_Reject_Crown
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Pronunciamento
+		}
+		mutually_exclusive = {
+			focus = SPR_Keep_Monarchy
+			focus = SPR_Enforce_Monarchy
+		}
+		x = 22
+		y = 15
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Enforce_Monarchy
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_End_of_Old_Order
+		}
+		mutually_exclusive = {
+			focus = SPR_Keep_Monarchy
+			focus = SPR_Reject_Crown
+		}
+		x = 30
+		y = 15
+		completion_reward = {
+			add_popularity = { ideology = autocracy popularity = 0.1 }
+		}
+	}
+	focus = {
+		id = SPR_Fight_Carlists
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Reject_Crown
+		}
+		x = 22
+		y = 16
+		completion_reward = {
+			add_political_power = -30
+			add_popularity = { ideology = autocracy popularity = -0.5 }
+		}
+	}
+	focus = {
+		id = SPR_Deal_with_Anarchists
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Reject_Crown
+		}
+		x = 20
+		y = 16
+		completion_reward = {
+			add_popularity = { ideology = anarchism popularity = 0.03 }
+		}
+	}
+	focus = {
+		id = SPR_Democratic_Propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Reject_Crown
+		}
+		x = 24
+		y = 16
+		completion_reward = {
+			add_popularity = { ideology = centrism popularity = 0.5 }
+			add_popularity = { ideology = traditional_conservatism popularity = 0.5 }
+			add_popularity = { ideology = radical_democracy popularity = 0.5 }
+		}
+	}
+	focus = {
+		id = SPR_Internal_Revolution
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Deal_with_Anarchists
+		}
+		prerequisite = {
+			focus = SPR_Fight_Carlists
+		}
+		prerequisite = {
+			focus = SPR_Democratic_Propaganda
+		}
+		x = 22
+		y = 17
+		completion_reward = {
+			add_stability = -0.1
+			add_popularity = { ideology = autocracy popularity = -0.05 }
+		}
+	}
+	focus = {
+		id = SPR_Kick_Out_Monarchy
+		icon = GFX_goal_generic_military_sphere
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Internal_Revolution
+		}
+		x = 22
+		y = 18
+		completion_reward = {
+			remove_ideas = SPR_Queen_Isabella_II
+		}
+	}
+	focus = {
+		id = SPR_Proclaim_Republic
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Kick_Out_Monarchy
+		}
+		x = 22
+		y = 19
+		completion_reward = {
+			add_stability = 0.1
+			add_ideas = SPR_Proclaimed_Republic
+			set_cosmetic_tag = SPR_republic
+		}
+
+	}
+	focus = {
+		id = SPR_Keep_Democratic_Constitution
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Expell_Germans
+			focus = SPR_Proclaim_Republic
+		}
+		x = 22
+		y = 20
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = SPR_Woo_Democracy
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Democratic_Constitution
+		}
+		x = 22
+		y = 21
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_woo_democracy1
+				}
+			}
+			CHI = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_woo_democracy1
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = SPR_Peaceful_Investment
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Democratic_Constitution
+		}
+		x = 20
+		y = 21
+		completion_reward = {
+			add_political_power = 40
+			add_ideas = SPR_Peaceful_Investment1
+		}
+	}
+	focus = {
+		id = SPR_La_Gloriosa
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Enforce_Monarchy
+			focus = SPR_Keep_Monarchy
+		}
+		x = 28
+		y = 16
+		completion_reward = {
+			#Do
+		}
+	}
+	focus = {
+		id = SPR_Isabellas-Resignation
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_La_Gloriosa
+		}
+		x = 28
+		y = 17
+		completion_reward = {
+			add_stability = -0.05
+			remove_ideas = SPR_Queen_Isabella_II
+		}
+	}
+	focus = {
+		id = SPR_Support_Amedeo
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Keep_Monarchy
+		}
+		prerequisite = {
+			focus = SPR_Isabellas-Resignation
+		}
+		x = 26
+		y = 18
+		completion_reward = {
+			add_popularity = { ideology = autocracy popularity = -0.05 }
+			FRA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_support_amadeo1
+				}
+			}
+			POR = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_support_amadeo2
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_support_amadeo3
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Support_Leopold
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Work_with_Carlists
+		}
+		prerequisite = {
+			focus = SPR_Isabellas-Resignation
+		}
+		x = 30
+		y = 18
+		completion_reward = {
+			add_popularity = { ideology = autocracy popularity = 0.05 }
+			POR = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_support_leopold1
+				}
+			}
+			FRA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_support_leopold2
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Work_with_Carlists
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Enforce_Monarchy
+		}
+		x = 30
+		y = 16
+		completion_reward = {
+			add_popularity = { ideology = autocracy popularity = 0.05 }
+		}
+	}
+	focus = {
+		id = SPR_Expell_Weak_Monarchy
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Leopold
+		}
+		x = 30
+		y = 19
+
+	}
+	focus = {
+		id = SPR_Expell_Germans
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Amedeo
+		}
+		x = 26
+		y = 19
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Savoy_or_Bourbon
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Expell_Germans
+		}
+		x = 26
+		y = 20
+		completion_reward = {
+			country_event = { days = 1 id = spain.4 }
+		}
+	}
+	focus = {
+		id = SPR_Proclaim_Strong_Government
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Expell_Weak_Monarchy
+		}
+		x = 30
+		y = 20
+		completion_reward = {
+			set_politics = { ruling_party = autocracy elections_allowed = no }
+		}
+	}
+	focus = {
+		id = SPR_Italian_Family
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Savoy_or_Bourbon
+		}
+		mutually_exclusive = {
+			focus = SPR_Strongest_Ties_Napoleon
+			focus = SPR_Spaniard_Habsburg_Historical_Friendship
+		}
+		x = 26
+		y = 21
+		available = {
+			has_idea = SPR_King_Amedeo_I
+		}
+		completion_reward = {
+			custom_effect_tooltip = SPR_Italian_Family1
+			hidden_effect = {
+				PIE = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				ITA = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				TUS = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				PAR = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				MOD = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				PAP = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				LVI = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				TSC = {
+					add_opinion_modifier = {
+						target = SPR
+						modifier = spr_same_dynasty
+					}
+				}
+				add_opinion_modifier = {
+					target = PIE
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = ITA
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = PAR
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = MOD
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = LVI
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = TSC
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = PAP
+					modifier = spr_same_dynasty
+				}
+				add_opinion_modifier = {
+					target = TUS
+					modifier = spr_same_dynasty
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Strongest_Ties_Napoleon
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Savoy_or_Bourbon
+		}
+		mutually_exclusive = {
+			focus = SPR_Italian_Family
+		}
+		x = 24
+		y = 21
+		completion_reward = {
+			FRA = {
+				add_opinion_modifier = {
+					modifier = spr_friendship
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_friendship
+				target = SPR
+			}
+		}
+	}
+	focus = {
+		id = SPR_Spaniard_Habsburg_Historical_Friendship
+		icon = GFX_goal_anschluss
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Savoy_or_Bourbon
+			focus = SPR_Proclaim_Strong_Government
+		}
+		mutually_exclusive = {
+			focus = SPR_Italian_Family
+		}
+		x = 28
+		y = 21
+		available = {
+			NOT = {
+				has_idea = SPR_King_Amedeo_I
+			}
+		}
+		completion_reward = {
+			AUS = {
+				add_opinion_modifier = {
+					modifier = spr_habsburg_historical_friendship
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_habsburg_historical_friendship
+				target = AUS
+			}
+		}
+	}
+	focus = {
+		id = SPR_Investment_in_War
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Proclaim_Strong_Government
+		}
+		x = 32
+		y = 21
+		completion_reward = {
+			add_ideas = SPR_Investment_War
+		}
+	}
+	focus = {
+		id = SPR_Easier_Path_to_War
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Investment_in_War
+		}
+		x = 32
+		y = 22
+		completion_reward = {
+			add_ideas = SPR_Easier_Path_War
+		}
+	}
+	focus = {
+		id = SPR_Support_Bismarks_Dream
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Unbreakable_Ties_Prussia
+		}
+		prerequisite = {
+			focus = SPR_Spaniard_Habsburg_Historical_Friendship
+		}
+		mutually_exclusive = {
+			focus = SPR_Stay_Out_of_Franco_Prussian_War
+			focus = SPR_Support_French_Defense
+		}
+		x = 30
+		y = 22
+		available = {
+			has_global_flag = eoanb_flag_franco_prussian_war_ongoing
+		}
+		completion_reward = {
+			PRS = {
+				load_oob = SPR_german_volunteers
+			}
+		}
+	}
+	focus = {
+		id = SPR_Unbreakable_Ties_Prussia
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Proclaim_Strong_Government
+		}
+		x = 30
+		y = 21
+		completion_reward = {
+			PRS = {
+				add_opinion_modifier = {
+					modifier = spr_unbreakable_ties
+					target = SPR
+				}
+			}
+			GER = {
+				add_opinion_modifier = {
+					modifier = spr_unbreakable_ties
+					target = SPR
+				}
+			}
+			add_opinion_modifier = {
+				modifier = spr_unbreakable_ties
+				target = PRS
+			}
+			add_opinion_modifier = {
+				modifier = spr_unbreakable_ties
+				target = GER
+			}
+		}
+	}
+	focus = {
+		id = SPR_Stay_Out_of_Franco_Prussian_War
+		icon = GFX_goal_generic_cavalry
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Strongest_Ties_Napoleon
+			focus = SPR_Italian_Family
+			focus = SPR_Spaniard_Habsburg_Historical_Friendship
+		}
+		mutually_exclusive = {
+			focus = SPR_Support_French_Defense
+			focus = SPR_Support_Bismarks_Dream
+		}
+		x = 26
+		y = 22
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Support_French_Defense
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Strongest_Ties_Napoleon
+		}
+		mutually_exclusive = {
+			focus = SPR_Stay_Out_of_Franco_Prussian_War
+			focus = SPR_Support_Bismarks_Dream
+		}
+		x = 24
+		y = 22
+		available = {
+			has_global_flag = eoanb_flag_franco_prussian_war_ongoing
+		}
+		completion_reward = {
+			FRA = {
+				load_oob = SPR_french_volunteers
+			}
+		}
+	}
+	focus = {
+		id = SPR_International_Affairs
+		icon = GFX_goal_generic_alliance
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Start_Election_period
+		}
+		x = 12
+		y = 12
+		completion_reward = {
+			add_political_power = 30
+		}
+	}
+	focus = {
+		id = SPR_European_Affairs
+		icon = GFX_goal_generic_army_doctrines
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_International_Affairs
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = SPR_El_Nuevo_Mundo
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_International_Affairs
+		}
+		x = 6
+		y = 13
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+	focus = {
+		id = SPR_Support_Italian_Unification
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_European_Affairs
+		}
+		x = 16
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Borders_of_Spain
+		icon = GFX_goal_generic_fortify_city
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_European_Affairs
+		}
+		x = 14
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Ratify_1851_Concordat
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_European_Affairs
+		}
+		x = 18
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Support_Catholic_Irish
+		icon = GFX_goal_generic_major_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ratify_1851_Concordat
+		}
+		x = 18
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Threaten_Portugese_Stability
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Italian_Unification
+		}
+		prerequisite = {
+			focus = SPR_Borders_of_Spain
+		}
+		mutually_exclusive = {
+			focus = SPR_Collaborate_with_Portugal
+		}
+		x = 16
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Collaborate_with_Portugal
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Borders_of_Spain
+		}
+		prerequisite = {
+			focus = SPR_Support_Italian_Unification
+		}
+		mutually_exclusive = {
+			focus = SPR_Threaten_Portugese_Stability
+		}
+		x = 14
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Iberian_Free_Movement
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Collaborate_with_Portugal
+		}
+		x = 14
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Demand_Madeira
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Threaten_Portugese_Stability
+		}
+		x = 16
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Trade_with_Turks
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Support_Catholic_Irish
+		}
+		x = 18
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Crisis_in_Mexico
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_El_Nuevo_Mundo
+		}
+		x = 6
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Befriend_CSA
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Crisis_in_Mexico
+		}
+		mutually_exclusive = {
+			focus = SPR_Denounce_CSA
+		}
+		x = 8
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Denounce_CSA
+		icon = GFX_goal_generic_propaganda
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Crisis_in_Mexico
+		}
+		mutually_exclusive = {
+			focus = SPR_Befriend_CSA
+		}
+		x = 4
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Neglect_Central_America
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Befriend_CSA
+			focus = SPR_Denounce_CSA
+		}
+		mutually_exclusive = {
+			focus = SPR_Approach_Central_America
+		}
+		x = 8
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Approach_Central_America
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Denounce_CSA
+			focus = SPR_Befriend_CSA
+		}
+		mutually_exclusive = {
+			focus = SPR_Neglect_Central_America
+		}
+		x = 4
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Embassies_Caracas_Bogota
+		icon = GFX_goal_generic_alliance
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Approach_Central_America
+		}
+		x = 4
+		y = 17
+
+	}
+	focus = {
+		id = SPR_Claim_Yucatan
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Sugar_Rivalry
+		}
+		x = 8
+		y = 18
+
+	}
+	focus = {
+		id = SPR_Denounce_British_Guiana_Conflict
+		icon = GFX_goal_generic_attack_allies
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Embassies_Caracas_Bogota
+		}
+		x = 4
+		y = 18
+
+	}
+	focus = {
+		id = SPR_Tensions_Over_Pacific
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_El_Nuevo_Mundo
+		}
+		x = 2
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Exploration_Mission_Over_Pacific
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Tensions_Over_Pacific
+		}
+		x = 2
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Talambo_Incident
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Exploration_Mission_Over_Pacific
+		}
+		x = 2
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Useless_Expedition
+		icon = GFX_goal_generic_military_deal
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Talambo_Incident
+		}
+		mutually_exclusive = {
+			focus = SPR_Escalate_the_War
+		}
+		x = 2
+		y = 17
+
+	}
+	focus = {
+		id = SPR_Escalate_the_War
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_Talambo_Incident
+		}
+		mutually_exclusive = {
+			focus = SPR_Useless_Expedition
+		}
+		x = 0
+		y = 17
+
+	}
+	focus = {
+		id = SPR_Allow_Immigration_to_Americas
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_El_Nuevo_Mundo
+		}
+		mutually_exclusive = {
+			focus = SPR_Limit_Immigration_to_Americas
+		}
+		x = 10
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Limit_Immigration_to_Americas
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = SPR_El_Nuevo_Mundo
+		}
+		mutually_exclusive = {
+			focus = SPR_Allow_Immigration_to_Americas
+		}
+		x = 12
+		y = 14
+
+	}
+	focus = {
+		id = SPR_Befriend_La_Plata
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Allow_Immigration_to_Americas
+			focus = SPR_Limit_Immigration_to_Americas
+		}
+		x = 10
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Befriend_Brazil
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Limit_Immigration_to_Americas
+			focus = SPR_Allow_Immigration_to_Americas
+		}
+		x = 12
+		y = 15
+
+	}
+	focus = {
+		id = SPR_Malvinas_Son_Argentinas
+		icon = GFX_goal_generic_position_armies
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Befriend_La_Plata
+		}
+		x = 10
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Heart_of_South_America
+		icon = GFX_goal_tripartite_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Befriend_Brazil
+		}
+		x = 12
+		y = 16
+
+	}
+	focus = {
+		id = SPR_Trade_Relations
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Malvinas_Son_Argentinas
+		}
+		prerequisite = {
+			focus = SPR_Heart_of_South_America
+		}
+		x = 10
+		y = 17
+
+	}
+	focus = {
+		id = SPR_Banco_Santander
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Spain
+		}
+		x = 36
+		y = 13
+		completion_reward = {
+			add_ideas = SPR_Banco_Santander1
+		}
+	}
+	focus = {
+		id = SPR_Naipes_Heraclio
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Iberian_Companies
+		}
+		x = 32
+		y = 14
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Expand_Banks
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cortefiel_1800s
+		}
+		prerequisite = {
+			focus = SPR_Grupo_Agbar_Barcelona
+		}
+		prerequisite = {
+			focus = SPR_Ferrocarriles_Espanoles
+		}
+		x = 34
+		y = 15
+		completion_reward = {
+			add_ideas = SPR_Banks_Expanded
+		}
+	}
+	focus = {
+		id = SPR_Machine_Builders
+		icon = GFX_goal_generic_production
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Grupo_Agbar_Barcelona
+		}
+		prerequisite = {
+			focus = SPR_Ferrocarriles_Espanoles
+		}
+		prerequisite = {
+			focus = SPR_Cortefiel_1800s
+		}
+		x = 36
+		y = 15
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = mechanical_engineering_tech }
+		}
+	}
+	focus = {
+		id = SPR_Grupo_Agbar_Barcelona
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Banco_Santander
+		}
+		x = 36
+		y = 14
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Fortify_Pyrenees
+		icon = GFX_goal_generic_construct_military
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Ferrocarriles_Espanoles
+		}
+		prerequisite = {
+			focus = SPR_Grupo_Agbar_Barcelona
+		}
+		prerequisite = {
+			focus = SPR_Cortefiel_1800s
+		}
+		x = 38
+		y = 15
+		completion_reward = {
+			FRA = {
+				add_opinion_modifier = {
+					modifier = spr_french_angry_at_forts
+					target = SPR
+				}
+			}
+			custom_effect_tooltip = spr_french_border_forts
+			hidden_effect = {
+				165 = {
+					add_building_construction = {
+						type = bunker
+						province = 9824
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11779
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3898
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 3899
+						level = 1
+						instant_build = yes
+					}
+				}
+				166 = {
+					add_building_construction = {
+						type = bunker
+						province = 899
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 915
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						province = 11838
+						level = 1
+						instant_build = yes
+					}
+				}
+				172 = {
+					add_building_construction = {
+						type = bunker
+						province = 3931
+						level = 1
+						instant_build = yes
+					}
+				}
+				1059 = {
+					add_building_construction = {
+						type = bunker
+						province = 3737
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Tech_Facilities
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Machine_Builders
+		}
+		x = 36
+		y = 16
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SPR_Madrid_University
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Tech_Facilities
+		}
+		x = 36
+		y = 17
+		available = {
+			num_of_factories > 49
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SPR_Spanish_Weapon_Industry
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Spanish_Arm_Industry
+		}
+		x = 40
+		y = 14
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Manageable_Navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Marine_Expansion
+		}
+		mutually_exclusive = {
+			focus = SPR_Invincible_Armada
+		}
+		x = 42
+		y = 14
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = frigate_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = corvette_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = sloop_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = dd_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cl_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = ss_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = submarine_tech }
+		}
+	}
+	focus = {
+		id = SPR_Marine_Expansion
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Industrial_Spain
+		}
+		x = 44
+		y = 13
+		completion_reward = {
+			random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SPR_Invincible_Armada
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Marine_Expansion
+		}
+		mutually_exclusive = {
+			focus = SPR_Manageable_Navy
+		}
+		x = 46
+		y = 14
+		completion_reward = {
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = lineship_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = gunboat_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = bc_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = bb_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = shbb_tech }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = cv_tech }
+		}
+	}
+	focus = {
+		id = SPR_Ports_Everywhere
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Manageable_Navy
+		}
+		x = 42
+		y = 15
+		completion_reward = {
+			add_ideas = SPR_Ports_Everywhere1
+		}
+	}
+	focus = {
+		id = SPR_Dockyard_Policy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Invincible_Armada
+		}
+		x = 46
+		y = 15
+		completion_reward = {
+			add_ideas = SPR_Dockyard_Policy1
+		}
+	}
+	focus = {
+		id = SPR_Send_Army2
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Chaos_in_Philippines
+		}
+		x = 40
+		y = 6
+		completion_reward = {
+			add_manpower = -5000
+		}
+	}
+	focus = {
+		id = SPR_Victory_in_Philippines
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Send_Army2
+		}
+		x = 40
+		y = 7
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.05
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.05
+			}
+		}
+	}
+	focus = {
+		id = SPR_Abolish_Slavery_Cuba
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Develop_Island
+		}
+		mutually_exclusive = {
+			focus = SPR_Keep_Slavery_Cuba
+		}
+		x = 32
+		y = 5
+		completion_reward = {
+			add_political_power = -50
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Appeal_Anti_Slavery_Nations
+		icon = GFX_goal_generic_improve_relations
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Abolish_Slavery_Cuba
+		}
+		x = 30
+		y = 6
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					modifier = spr_appeal_anti_slavery_nations1
+					target = SPR
+				}
+			}
+			HAI = {
+				add_opinion_modifier = {
+					modifier = spr_appeal_anti_slavery_nations1
+					target = SPR
+				}
+			}
+			CSA = {
+				add_opinion_modifier = {
+					modifier = spr_appeal_anti_slavery_nations2
+					target = SPR
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_No_Golden_Circle
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Abolish_Slavery_Cuba
+		}
+		x = 32
+		y = 6
+		completion_reward = {
+			COL = {
+				add_opinion_modifier = {
+					modifier = spr_no_golden_circle1
+					target = SPR
+				}
+			}
+			MEX = {
+				add_opinion_modifier = {
+					modifier = spr_no_golden_circle1
+					target = SPR
+				}
+			}
+			VEN = {
+				add_opinion_modifier = {
+					modifier = spr_no_golden_circle1
+					target = SPR
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Respond_to_Crisis
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_No_Golden_Circle
+		}
+		x = 32
+		y = 7
+		#Do
+	}
+	focus = {
+		id = SPR_Abandon_Lost_Cause
+		icon = GFX_goal_generic_secret_weapon
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Respond_to_Crisis
+			focus = SPR_Cause_Crisis
+		}
+		x = 32
+		y = 8
+		available = {
+			date > 1873.1.1
+		}
+		completion_reward = {
+			add_stability = -0.05
+		}
+	}
+	focus = {
+		id = SPR_Adios_Cuba
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Abandon_Lost_Cause
+		}
+		x = 32
+		y = 9
+		completion_reward = {
+			white_peace = CUB
+			add_stability = 0.05
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = SPR_Victory_Cuba
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Cause_Crisis
+			focus = SPR_Respond_to_Crisis
+		}
+		x = 36
+		y = 8
+		available = {
+			has_war = no
+		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Crown_Jewel_of_Carribean
+		icon = GFX_goal_generic_demand_territory
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Victory_Cuba
+		}
+		x = 36
+		y = 9
+		completion_reward = {
+			USA = {
+				add_opinion_modifier = {
+					modifier = spr_crown_jewel_caribbean
+					target = SPR
+				}
+			}
+			315 = {
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	focus = {
+		id = SPR_Annex_Dominican_Republic
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Dominican_Threat
+		}
+		x = 28
+		y = 4
+		completion_reward = {
+			declare_war_on = { target = DOM type = annex_everything }
+			#Do
+		}
+	}
+	focus = {
+		id = SPR_Annex_Ifni
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Cause_Instability_Morocco
+		}
+		x = 46
+		y = 5
+		completion_reward = {
+			#Do
+		}
+
+	}
+	focus = {
+		id = SPR_Stop_Moroccan_Raids
+		icon = GFX_goal_generic_political_pressure
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Annex_Ifni
+		}
+		x = 46
+		y = 6
+		completion_reward = {
+			add_political_power = -40
+		}
+	}
+	focus = {
+		id = SPR_Fight_for_Cape_July
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Stop_Moroccan_Raids
+		}
+		prerequisite = {
+			focus = SPR_Further_Expansion_Inland
+		}
+		x = 48
+		y = 7
+#Do
+	}
+	focus = {
+		id = SPR_Look_Elsewhere
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Fight_for_Cape_July
+		}
+		mutually_exclusive = {
+			focus = SPR_Destroy_Morocco
+		}
+		x = 50
+		y = 8
+		completion_reward = {
+			add_state_claim = 835
+		}
+	}
+	focus = {
+		id = SPR_Destroy_Morocco
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Fight_for_Cape_July
+		}
+		mutually_exclusive = {
+			focus = SPR_Look_Elsewhere
+		}
+		x = 46
+		y = 8
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = MOR }
+			TUR = {
+				add_opinion_modifier = {
+					modifier = spr_planning_to_destroy_morocco
+					target = SPR
+				}
+			}
+		}
+	}
+	focus = {
+		id = SPR_Colonize_Equitorial_Guinea
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Colonize_Kioko_Island
+		}
+		x = 44
+		y = 5
+		completion_reward = {
+#Do
+		}
+	}
+	focus = {
+		id = SPR_Bigger_Guinea
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Colonize_Equitorial_Guinea
+		}
+		mutually_exclusive = {
+			focus = SPR_Stop_Expanding_Black_Africa
+		}
+		x = 44
+		y = 6
+		completion_reward = {
+			#Do
+		}
+	}
+	focus = {
+		id = SPR_Stop_Expanding_Black_Africa
+		icon = GFX_goal_generic_defence
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Colonize_Equitorial_Guinea
+		}
+		mutually_exclusive = {
+			focus = SPR_Bigger_Guinea
+		}
+		x = 42
+		y = 6
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = SPR_Strong_Trade_Port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Bigger_Guinea
+			focus = SPR_Stop_Expanding_Black_Africa
+		}
+		x = 44
+		y = 8
+		#Do
+	}
+	focus = {
+		id = SPR_Form_Spanish_African_Company
+		icon = GFX_goal_generic_national_unity
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Look_Elsewhere
+			focus = SPR_Destroy_Morocco
+		}
+		prerequisite = {
+			focus = SPR_Strong_Trade_Port
+		}
+		x = 48
+		y = 9
+
+	}
+	focus = {
+		id = SPR_Keep_Africa_Under_Direct_Control
+		icon = GFX_goal_demand_sudetenland
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Strong_Trade_Port
+			focus = SPR_Destroy_Morocco
+			focus = SPR_Look_Elsewhere
+		}
+		x = 46
+		y = 9
+
+	}
+	focus = {
+		id = SPR_Training_Navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Dutch_Spanish_Collaboration
+		}
+		x = 54
+		y = 4
+
+	}
+	focus = {
+		id = SPR_Explore_Seas
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Training_Navy
+		}
+		x = 54
+		y = 5
+
+	}
+	focus = {
+		id = SPR_Marine_Superpower
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Catholic_Missionaries_Asia
+		}
+		prerequisite = {
+			focus = SPR_Explore_Seas
+		}
+		x = 52
+		y = 6
+
+	}
+	focus = {
+		id = SPR_Try_Buy_Shanton
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 1.00
+		prerequisite = {
+			focus = SPR_Marine_Superpower
+		}
+		x = 52
+		y = 7
+
+	}
+	focus = {
+		id = SPR_Take_It_By_Force
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 10.00
+		prerequisite = {
+			focus = SPR_Try_Buy_Shanton
+		}
+		x = 52
+		y = 8
+
+	}
+}

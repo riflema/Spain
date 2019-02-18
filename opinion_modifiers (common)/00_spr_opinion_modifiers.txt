@@ -1,0 +1,74 @@
+opinion_modifiers = { #Spanish FT
+	spr_gave_autonomy = {
+		value = 100
+	}
+	spr_french_angry_at_forts = {
+		value = -30
+	}
+	spr_bourbon_legacy = {
+		value = 30
+	}
+	spr_woo_democracy1 = {
+		value = 30
+	}
+	spr_support_amadeo1 = {
+		value = 70
+	}
+	spr_support_amadeo2 = {
+		value = -30
+	}
+	spr_support_amadeo3 = {
+		value = 10
+	}
+	spr_support_leopold1 = {
+		value = 70
+	}
+	spr_support_leopold2 = {
+		value = -30
+	}
+	spr_savoy_throne = {
+		value = 60
+	}
+	spr_same_dynasty = {
+		value = 30
+	}
+	spr_friendship = {
+		value = 30
+	}
+	spr_habsburg_historical_friendship = {
+		value = 50
+	}
+	spr_unbreakable_ties = {
+		value = 30
+	}
+	spr_french_angered_by_forts = {
+		value = -10
+	}
+	spr_crown_jewel_caribbean = {
+		value = -50
+	}
+	spr_south_china_sea_agreement1 = {
+		value = 30
+	}
+	spr_catholic_missionaries1 = {
+		value = 30
+	}
+	spr_no_golden_circle1 = {
+		value = 30
+	}
+	spr_appeal_anti_slavery_nations1 = {
+		value = 30
+	}
+	spr_appeal_anti_slavery_nations2 = {
+		value = -40
+	}
+	spr_dominican_threat1 = {
+		value = -40
+	}
+	spr_morocco_approach1 = {
+		value = -20
+	}
+	spr_planning_to_destroy_morocco = {
+		value = -100
+	}
+}

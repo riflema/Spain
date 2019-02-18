@@ -1,0 +1,133 @@
+ideas = {
+	country = {
+		SPR_Galicians_Army = {
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		SPR_Low_Galician_Conscription = {
+			modifier = {
+				conscription = -0.03
+			}
+		}
+		SPR_Language_Culture = {
+			modifier = {
+				political_power_gain = -0.01
+			}
+		}
+		SPR_Promote_Basque_Scholar = {
+			modifier = {
+				research_time_factor = -0.02
+			}
+		}
+		SPR_Espana_Unida1 = {
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		SPR_Federalism = {
+			modifier = {
+				political_power_gain = -0.2
+			}
+		}
+		SPR_Unitary_State1 = {
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+		SPR_Division_Powers = {
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+		SPR_Queen_Isabella_II = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SPR_Queen_Isa_II
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = 0.1
+			}
+		}
+		SPR_Peaceful_Investment1 = {
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1 
+				production_speed_arms_factory_factor = -0.1 
+			}
+		}
+		SPR_Proclaimed_Republic = {
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+		SPR_King_Amedeo_I = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SPR_King_Ame_I
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		SPR_King_Alfonso_XII = {
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = SPR_King_Alf_XII
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		SPR_Investment_War = {
+			modifier = {
+				production_speed_industrial_complex_factor = -0.1 
+				production_speed_arms_factory_factor = 0.1 
+			}
+		}
+		SPR_Easier_Path_War = {
+			modifier = {
+				justify_war_goal_time = -0.20
+			}
+		}
+		SPR_Banco_Santander1 = {
+			modifier = {
+				trade_opinion_factor = 0.25
+			}
+		} 
+		SPR_Ports_Everywhere1 = {
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+			}
+		} 
+		SPR_Dockyard_Policy1 = {
+			modifier = {
+				production_speed_dockyard_factor = 0.1
+				production_speed_infrastructure_factor = -0.1
+			}
+		} 
+		SPR_Banks_Expanded = {
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		SPR_Increased_Sugar_Production = {
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		SPR_Education_Project1 = {
+			modifier = {
+				research_time_factor = -0.02
+			}
+		}
+		SPR_Increased_Production11 = {
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+	}
+}

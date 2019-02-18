@@ -1,0 +1,151 @@
+﻿add_namespace = spain
+
+country_event = {
+	id = spain.1
+	title = spain.1.t
+	desc = spain.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = spain.1.a
+		ai_chance = { factor = 40 }
+		POR = { 
+			transfer_state = 171
+			give_military_access = SPR
+			add_state_core = 171
+		}
+		SPR = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+
+		}
+		
+	}
+	option = {
+		name = spain.1.b
+		ai_chance = { factor = 40 }
+		POR = { transfer_state = 171 }
+		add_state_core = 171
+		release = MZB
+		SPR = { annex_country = { target = MZB } }
+	}
+	option = {
+		name = spain.1.c
+		ai_chance = { factor = 20 }
+		
+	}
+}
+country_event = {
+	id = spain.2
+	title = spain.2.t
+	desc = spain.2.d
+	picture = GFX_report_event_generic_sign_treaty1
+		
+	is_triggered_only = yes
+
+	option = {
+		name = spain.2.a
+		ai_chance = { factor = 34 }
+		set_politics = { ruling_party = centrism }
+		country_event = { days = 1460 id = spain.2 }
+		
+	}
+	option = {
+		name = spain.2.b
+		ai_chance = { factor = 33 }
+		set_politics = { ruling_party = traditional_conservatism }
+		country_event = { days = 1460 id = spain.2 }
+	}
+	option = {
+		name = spain.2.c
+		ai_chance = { factor = 33 }
+		set_politics = { ruling_party = radical_democracy }
+		country_event = { days = 1460 id = spain.2 }
+	}
+}
+country_event = {
+	id = spain.3
+	title = spain.3.t
+	desc = spain.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+		
+	is_triggered_only = yes
+		
+	option = {
+		name = spain.3.a
+		ai_chance = { factor = 100 }
+		country_event = { days = 1 id = spain.2 }
+	}
+}
+country_event = {
+	id = spain.4
+	title = spain.4.t
+	desc = spain.4.d
+	picture = GFX_report_event_generic_sign_treaty1
+		
+	is_triggered_only = yes
+	
+	option = {
+		name = spain.4.a
+		ai_chance = { factor = 50 }
+		add_ideas = SPR_King_Amedeo_I
+		custom_effect_tooltip = SPR_Savoy_King
+		hidden_effect = {
+			PIE = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			ITA = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			TUS = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			PAR = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			MOD = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			PAP = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			LVI = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+			TSC = {
+				add_opinion_modifier = {
+					target = SPR
+					modifier = spr_savoy_throne
+				}
+			}
+		}
+	}
+	option = {
+		name = spain.4.b
+		ai_chance = { factor = 50 }
+		add_ideas = SPR_King_Alfonso_XII
+		add_political_power = 20
+	}
+}

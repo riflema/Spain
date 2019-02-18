@@ -1,0 +1,5 @@
+
+SPR_republic = {
+	color = rgb { 242  205  94 }
+	color_ui = rgb { 173 173 104 }
+}
